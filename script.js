@@ -31,13 +31,14 @@ function showImage(e) {
     images[i].style.display = "none";
   }
 
-  //   for (let i = 0; i < images.length; i++) {
-  //     dots[i].className = dots.className.replace(" active", "");
-  //   }
+  for (let i = 0; i < images.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
 
   if (index > images.length - 1) index = 0;
   if (index < 0) index = images.length - 1;
 
   images[index].style.display = "block";
+
   dots[index].className += " active";
 }
